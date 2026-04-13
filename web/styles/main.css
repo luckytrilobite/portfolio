@@ -1,0 +1,152 @@
+/* ===== 基本設定 ===== */
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #020617);
+    color: #e2e8f0;
+}
+
+/* ===== 導覽列（升級重點）===== */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px;
+
+    background: rgba(30, 41, 59, 0.6);
+    backdrop-filter: blur(10px);
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    color: #cbd5f5;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: #38bdf8;
+    color: black;
+}
+
+/* ===== 容器 ===== */
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+    animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== 標題 ===== */
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+h2 {
+    border-left: 4px solid #38bdf8;
+    padding-left: 10px;
+}
+
+/* ===== 卡片（重點）===== */
+.card {
+    background: rgba(30, 41, 59, 0.8);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 15px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    transition: 0.3s;
+}
+
+/* hover 動效 */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(56,189,248,0.3);
+}
+
+/* ===== 作品特殊樣式 ===== */
+.card h3 {
+    margin-top: 0;
+}
+
+/* ===== 照片牆（升級）===== */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+/* hover 放大 */
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* ===== 小細節 ===== */
+ul {
+    padding-left: 20px;
+}
+
+p {
+    line-height: 1.6;
+    color: #cbd5f5;
+}
+
+/* ===== Timeline 結構 ===== */
+.timeline {
+    position: relative;
+    margin: 40px 0;
+    padding-left: 20px;
+    border-left: 2px solid #38bdf8;
+}
+
+.trip {
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.trip::before {
+    content: "";
+    position: absolute;
+    left: -11px;
+    top: 5px;
+    width: 15px;
+    height: 15px;
+    background: #38bdf8;
+    border-radius: 50%;
+}
+
+/* 小字 */
+.trip .date {
+    font-size: 0.9em;
+    color: #94a3b8;
+}
+
+/* 圖片 */
+.trip img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
